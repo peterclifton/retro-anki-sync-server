@@ -1,7 +1,24 @@
 # retro-anki-sync-server
 
-ankisyncd
-=========
+**retro-anki-sync-server** is a fork of 
+[tsudoko/anki-sync-server](https://github/https://github.com/tsudoko/anki-sync-server)
+
+As the purpose of this fork is just for me to try things out. I recommend that you
+do **not** use this as your anki-sync-server. 
+If you are looking for an anki-sync-server to use please be aware that 
+Anki now includes a [build in sync-server](https://docs.ankiweb.net/sync-server.html)
+
+# Appendix
+
+## The original README
+
+Below is the README from 
+[tsudoko/anki-sync-server](https://github/https://github.com/tsudoko/anki-sync-server)
+at the time **retro-anki-sync-server** was forked from 
+[tsudoko/anki-sync-server](https://github/https://github.com/tsudoko/anki-sync-server)
+
+
+### ankisyncd
 
 [Anki][] is a powerful open source flashcard application, which helps you
 quickly and easily memorize facts over the long term utilizing a spaced
@@ -35,8 +52,7 @@ It supports Python 3 and Anki 2.1.
  - [Support for other database backends](#support-for-other-database-backends)
 </details>
 
-Installing
-----------
+#### Installing
 
 0. Install Anki. The currently supported version range is 2.1.1〜2.1.11, with the
    exception of 2.1.9<sup id="readme-fn-01b">[1](#readme-fn-01)</sup>. (Keep in
@@ -80,15 +96,13 @@ Installing
 [commit `95ccbfdd3679`]: https://github.com/dae/anki/commit/95ccbfdd3679dd46f22847c539c7fddb8fa904ea
 [commit `a389b8b4a0e2`]: https://github.com/dae/anki/commit/a389b8b4a0e209023c4533a7ee335096a704079c
 
-Installing (Docker)
--------------------
+#### Installing (Docker)
 
 Follow [these instructions](https://github.com/kuklinistvan/docker-anki-sync-server#usage).
 
-Setting up Anki
----------------
+#### Setting up Anki
 
-### Anki 2.1
+##### Anki 2.1
 
 Create a new directory in [the add-ons folder][addons21] (name it something
 like ankisyncd), create a file named `__init__.py` containing the code below
@@ -102,7 +116,7 @@ and put it in the `ankisyncd` directory.
         aqt.mw.pm.profile['hostNum'] = None
     anki.hooks.addHook("profileLoaded", resetHostNum)
 
-### Anki 2.0
+#### Anki 2.0
 
 Create a file (name it something like ankisyncd.py) containing the code below
 and put it in `~/Anki/addons`.
@@ -115,7 +129,7 @@ and put it in `~/Anki/addons`.
 
 [addons21]: https://apps.ankiweb.net/docs/addons.html#_add_on_folders
 
-### AnkiDroid
+#### AnkiDroid
 
 Advanced → Custom sync server
 
@@ -130,21 +144,20 @@ Even though the AnkiDroid interface will request an email address, this is not
 required; it will simply be the username you configured with `ankisyncctl.py
 adduser`.
 
-Running `ankisyncd` without `pyaudio`
--------------------------------------
+#### Running `ankisyncd` without `pyaudio`
 
 `ankisyncd` doesn't use the audio recording feature of Anki, so if you don't
 want to install PortAudio, you can edit some files in the `anki-bundled`
 directory to exclude `pyaudio`:
 
-### Anki ≥2.1.9
+#### Anki ≥2.1.9
 
 Just remove "pyaudio" from requirements.txt and you're done. This change has
 been introduced in [commit `ca710ab3f1c1`][].
 
 [commit `ca710ab3f1c1`]: https://github.com/dae/anki/commit/ca710ab3f1c1174469a3b48f1257c0fc0ce624bf
 
-### Older versions
+#### Older versions
 
 First go to `anki-bundled`, then follow one of the instructions below. They all
 do the same thing, you can pick whichever one you're most comfortable with.
@@ -162,8 +175,7 @@ remove every line starting with "pyaudio" in requirements.txt
     $ sed -i '/# Packaged commands/,$d' anki/sound.py
     $ sed -i '/^pyaudio/d' requirements.txt
 
-ENVVAR configuration overrides
-------------------------------
+#### ENVVAR configuration overrides
 
 Configuration values can be set via environment variables using `ANKISYNCD_` prepended
 to the uppercase form of the configuration value. E.g. the environment variable,
@@ -171,8 +183,7 @@ to the uppercase form of the configuration value. E.g. the environment variable,
 
 Environment variables override the values set in the `ankisyncd.conf`.
 
-Support for other database backends
------------------------------------
+#### Support for other database backends
 
 sqlite3 is used by default for user data, authentication and session persistence.
 
