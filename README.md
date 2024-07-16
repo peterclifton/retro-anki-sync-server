@@ -3,10 +3,11 @@
 **retro-anki-sync-server** is a fork of 
 [tsudoko/anki-sync-server](https://github/https://github.com/tsudoko/anki-sync-server)
 
-As the purpose of this fork is just for me to try things out. I recommend that you
-do **not** use this as your anki-sync-server. 
-If you are looking for an anki-sync-server to use please be aware that 
-Anki now includes a [build in sync-server](https://docs.ankiweb.net/sync-server.html)
+As the purpose of this fork is just for me to try things out: I strongly 
+recommend that you do **not**, under any circumstances, attempt to use this as 
+your anki-sync-server.  If you are looking for an anki-sync-server to use please 
+be aware that Anki now includes a 
+[build in sync-server](https://docs.ankiweb.net/sync-server.html)
 
 # Appendix
 
