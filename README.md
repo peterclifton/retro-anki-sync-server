@@ -11,7 +11,7 @@ be aware that Anki now includes a
 
 ## Setup
 
-- `git clone https://github.com/peterclifton/retro-anki-sync-server.git`git
+- `git clone https://github.com/peterclifton/retro-anki-sync-server.git`
 - Setup a python virtual environment
     - `python -m venv retro-anki-sync-venv`
     - `source retro-anki-sync-venv/bin/activate`
@@ -21,8 +21,8 @@ be aware that Anki now includes a
 
 ## Launching the server
 
-- Activate the python virtual environment (if not already activated)
-  `source retro-anki-sync-venv/bin/activiate`
+- Activate the python virtual environment (if not already activated):
+    - `source retro-anki-sync-venv/bin/activiate`
 - Make sure *anki* and *ankisyncd* are in the python path
     - `cd retro-anki-sync-server`
     - `PYTHONPATH="$PYHONPATH:$PWD:$PWD/anki-bundled`
