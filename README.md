@@ -31,8 +31,6 @@ be aware that Anki now includes a
 
 ---
 
-# Appendix
-
 ## The original README
 
 The README from 
