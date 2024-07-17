@@ -36,7 +36,11 @@ import threading
 import subprocess
 import inspect
 
-from distutils.spawn import find_executable # pylint: disable=import-error,no-name-in-module
+# distutils is depreciated from python 3.12 so replacing 
+# distutils.spawn.find_executable with shutil.which
+#from distutils.spawn import find_executable # pylint: disable=import-error,no-name-in-module
+import shutil
+
 from queue import Queue, Empty, Full
 
 
@@ -65,7 +69,12 @@ class MPVBase:
        based JSON IPC.
     """
 
-    executable = find_executable("mpv")
+
+    # distutils is depreciated from python 3.12 so replacing 
+    # distutils.spawn.find_executable with shutil.with
+    #executable = find_executable("mpv")
+    executable = shutil.which("mpv")
+
     popenEnv = None
 
     default_argv = [
