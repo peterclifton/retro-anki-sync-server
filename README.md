@@ -9,6 +9,26 @@ your anki-sync-server.  If you are looking for an anki-sync-server to use please
 be aware that Anki now includes a 
 [build in sync-server](https://docs.ankiweb.net/sync-server.html)
 
+## Setup
+
+- `git clone https://github.com/peterclifton/retro-anki-sync-server.git`git
+- Setup a python virtual environment
+    - `python -m venv retro-anki-sync-venv`
+    - `source retro-anki-sync-venv/bin/activate`
+    - `pip install --upgrade pip`
+    - `pip install -r retro-anki-sync-server/anki-bundled/requirements.txt`
+    - `pip install webob`
+
+## Launching the server
+
+- Activate the python virtual environment (if not already activated)
+  `source retro-anki-sync-venv/bin/activiate`
+- Make sure *anki* and *ankisyncd* are in the python path
+    - `cd retro-anki-sync-server`
+    - `PYTHONPATH="$PYHONPATH:$PWD:$PWD/anki-bundled`
+    - `export PYTHONPATH`
+- `python ankisyncd/sync_app.py ankisyncd.conf`
+
 # Appendix
 
 ## The original README
