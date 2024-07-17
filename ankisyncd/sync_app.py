@@ -34,6 +34,9 @@ from webob import Response
 from webob.dec import wsgify
 from webob.exc import *
 
+# Uncomment below if need to see the contents of sys.path for debugging
+#print(sys.path)
+
 import anki.db
 import anki.sync
 import anki.utils
