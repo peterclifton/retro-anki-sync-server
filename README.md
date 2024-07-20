@@ -17,7 +17,6 @@ be aware that Anki now includes a
     - `source retro-anki-sync-venv/bin/activate`
     - `pip install --upgrade pip`
     - `pip install -r retro-anki-sync-server/anki-bundled/requirements.txt`
-    - `pip install webob`
 
 ## Launching the server
 
