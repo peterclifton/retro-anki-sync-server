@@ -9,7 +9,12 @@ your anki-sync-server.  If you are looking for an anki-sync-server to use please
 be aware that Anki now includes a 
 [build in sync-server](https://docs.ankiweb.net/sync-server.html)
 
-## Setup
+Bearing in mind that I recommend you do **not** install/use retro-anki-sync-server,
+if you were to insist on giving it a go then there are two alternative approaches.
+
+## 1) Using this repository directly
+
+### Setup
 
 - `git clone https://github.com/peterclifton/retro-anki-sync-server.git`
 - Setup a python virtual environment
@@ -18,7 +23,7 @@ be aware that Anki now includes a
     - `pip install --upgrade pip`
     - `pip install -r retro-anki-sync-server/anki-bundled/requirements.txt`
 
-## Launching the server
+### Launching the server
 
 - Activate the python virtual environment (if not already activated):
     - `source retro-anki-sync-venv/bin/activiate`
@@ -27,6 +32,11 @@ be aware that Anki now includes a
     - `PYTHONPATH="$PYHONPATH:$PWD:$PWD/anki-bundled`
     - `export PYTHONPATH`
 - `python ankisyncd/sync_app.py ankisyncd.conf`
+
+## 2) Alternative: Installing on Arch Linux as a package
+
+See [retro-anki-sync-server-archbuild](https://github.com/peterclifton/retro-anki-sync-server-archbuild) 
+
 
 ---
 
